@@ -1,0 +1,5 @@
+# This will make sure eslint also lints dotfiles in the root directory, including '.eslintrc.js' itself
+# https://github.com/eslint/eslint/issues/4828
+!/.*.js
+/dist/
+/public/

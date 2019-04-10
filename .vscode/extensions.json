@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "dbaeumer.vscode-eslint",
+    "DavidAnson.vscode-markdownlint",
+    "mrmlnc.vscode-scss",
+    "shinnn.stylelint"
+  ]
+}

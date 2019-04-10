@@ -1,0 +1,10 @@
+# Rule customizations for markdownlint go here
+# https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md
+default: true
+
+# Disable line length restrictions, because editor soft-wrapping is being
+# used instead.
+line-length: false
+
+no-duplicate-heading:
+  siblings_only: true

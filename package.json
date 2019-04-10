@@ -1,0 +1,59 @@
+{
+  "name": "vue-scroll-span",
+  "version": "0.1.0",
+  "main": "dist/VueScrollSpan.umd.js",
+  "module": "dist/VueScrollSpan.common.js",
+  "unpkg": "dist/VueScrollSpan.umd.min.js",
+  "browser": {
+    "./sfc": "src/scroll-span.vue"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "prepublishOnly": "npm run build",
+    "build": "vue-cli-service build --target lib --name VueScrollSpan ./src/wrapper.js",
+    "lint": "run-s lint:all:*",
+    "build:staging": "vue-cli-service build --mode staging",
+    "lint:all:eslint": "npm run lint:eslint -- --fix --ext .js,.vue .",
+    "lint:all:markdownlint": "npm run lint:markdownlint -- --fix \"docs/*.md\" \"*.md\"",
+    "lint:dry-run": "run-s lint:dry-run:*",
+    "lint:dry-run:eslint": "npm run lint:eslint -- --ext .js,.vue .",
+    "lint:dry-run:markdownlint": "npm run lint:markdownlint -- \"docs/*.md\" \"*.md\"",
+    "lint:eslint": "eslint",
+    "lint:markdownlint": "markdownlint"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.6",
+    "vue-cli-plugin-stijlbreuk": "git://github.com/stijlbreuk/vue-cli-plugin-stijlbreuk.git#master"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "markdownlint-cli": "^0.14.1",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.5",
+    "reset-css": "4.x",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stijlbreuk/vue-scroll-span.git"
+  },
+  "keywords": [
+    "vue",
+    "scroll",
+    "span"
+  ],
+  "author": "Stijlbreuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stijlbreuk/vue-scroll-span/issues"
+  },
+  "homepage": "https://github.com/stijlbreuk/vue-scroll-span#readme"
+}
