@@ -20,9 +20,11 @@ Vue Scroll Span is a Vue component which automatically scrolls on hover if its t
 
 ## Demo
 
-### Basic
+### Options demo
 
-<!-- Add Basic Code Sandbox demo -->
+<a href="https://codesandbox.io/s/y31l4npp09?fontsize=14">
+  <img alt="Edit Vue Scroll Span basic  example" src="https://codesandbox.io/static/img/play-codesandbox.svg">
+</a>
 
 ## Installation
 
@@ -37,7 +39,16 @@ ES6 modules, import components manually.
 ```HTML
 <template>
   <div id="app">
-
+    <ScrollSpan
+      :duration="1000"
+      easing="easeInOutQuad"
+      :loop="true"
+      :loop-delay="0"
+      :style="{ width: '170px' }"
+      :rtl="false"
+    >
+      The quick brown fox jumps over the lazy dog
+    </ScrollSpan>
   </div>
 </template>
 <script>
