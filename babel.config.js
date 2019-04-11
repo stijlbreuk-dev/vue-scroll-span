@@ -2,12 +2,7 @@
 module.exports = {
   presets: [
     [
-      '@vue/app',
-      {
-        polyfills: [
-          'es6.promise'
-        ]
-      }
+      '@vue/app'
     ],
     'airbnb'
   ]

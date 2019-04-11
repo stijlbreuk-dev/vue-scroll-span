@@ -152,7 +152,8 @@ module.exports = {
     },
     {
       files: [
-        'src/**/*'
+        'src/**/*',
+        'examples/**/*'
       ],
       parserOptions: {
         // This will prevent errors when using 'import' in Vue SFCs
