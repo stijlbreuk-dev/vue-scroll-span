@@ -12,7 +12,6 @@
     "prepublishOnly": "npm run build",
     "build": "vue-cli-service build --target lib --name VueScrollSpan ./src/wrapper.js",
     "lint": "run-s lint:all:*",
-    "build:staging": "vue-cli-service build --mode staging",
     "lint:all:eslint": "npm run lint:eslint -- --fix --ext .js,.vue .",
     "lint:all:markdownlint": "npm run lint:markdownlint -- --fix \"docs/*.md\" \"*.md\"",
     "lint:dry-run": "run-s lint:dry-run:*",
