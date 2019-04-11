@@ -8,7 +8,7 @@
     "./sfc": "src/scroll-span.vue"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue serve --open examples/main.js",
     "prepublishOnly": "npm run build",
     "build": "vue-cli-service build --target lib --name VueScrollSpan ./src/wrapper.js",
     "lint": "run-s lint:all:*",
@@ -21,17 +21,14 @@
     "lint:eslint": "eslint",
     "lint:markdownlint": "markdownlint"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.6",
-    "vue-cli-plugin-stijlbreuk": "git://github.com/stijlbreuk/vue-cli-plugin-stijlbreuk.git#master"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-preset-airbnb": "^3.2.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "markdownlint-cli": "^0.14.1",
