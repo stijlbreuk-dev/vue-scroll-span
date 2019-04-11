@@ -1,7 +1,7 @@
 # Vue Scroll Span
 
 <p align="center">
-  <!-- Add example .gif -->
+  <img src="https://raw.githubusercontent.com/stijlbreuk/vue-scroll-span/master/images/vue-scroll-span-options-demo.gif" alt="Example .gif">
 </p>
 
 <p align="center">
