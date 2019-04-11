@@ -92,6 +92,7 @@ export default {
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
           return (progress) => {
+            // eslint-disable-next-line max-len
             vue.$refs.scrollSpan.scrollLeft = scrollLeftStart + (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
           };
         })(),
@@ -112,6 +113,7 @@ export default {
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
           return (progress) => {
+            // eslint-disable-next-line max-len
             vue.$refs.scrollSpan.scrollLeft = scrollLeftStart - (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
           };
         })(),

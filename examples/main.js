@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import Vue from 'vue';
 import VueScrollSpan from '../src/wrapper';
 import App from './App.vue';
