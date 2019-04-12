@@ -5,16 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [0.0.1] \[Unreleased]
-
-### Added
-
-- your added functionality
+## [0.2.1]
 
 ### Fixed
 
-- your fixed bug
+- Issue causing the scroll animations to finish early.
 
-## Changed
+## [0.2.0]
 
-- your change
+### Fixed
+
+- Issue causing destructuring the default export to result in undefined.
+
+## [0.1.0] Initial release
+
+### Added
+
+- `duration`, `durationIn`, `durationOut`, `easing`, `loop`, `loopDelay` and, `rtl` properties.

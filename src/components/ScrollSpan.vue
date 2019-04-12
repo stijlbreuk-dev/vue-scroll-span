@@ -48,7 +48,6 @@ export default {
   data() {
     return {
       animationFrameId: null,
-      animatedBack: false,
       isAnimatingIn: false,
       isHoveringOver: false,
       localDurationIn: this.durationIn == null ? this.duration : this.durationIn,
@@ -91,9 +90,10 @@ export default {
         easing: EasingFunctions[this.easing],
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
+          const diff = vue.$refs.scrollSpan.scrollWidth - vue.$refs.scrollSpan.clientWidth;
           return (progress) => {
             // eslint-disable-next-line max-len
-            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart + (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
+            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart + (this.rtl ? -1 : 1) * (diff * progress);
           };
         })(),
         isAnimatingIn: true
@@ -112,9 +112,10 @@ export default {
         easing: EasingFunctions[this.easing],
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
+          const diff = vue.$refs.scrollSpan.scrollWidth - vue.$refs.scrollSpan.clientWidth;
           return (progress) => {
             // eslint-disable-next-line max-len
-            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart - (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
+            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart - (this.rtl ? -1 : 1) * (diff * progress);
           };
         })(),
         isAnimatingIn: false
@@ -147,7 +148,6 @@ export default {
           vue.animationFrameId = requestAnimationFrame(animate);
         } else {
           vue.animationFrameId = null;
-          vue.animatedBack = !isAnimatingIn;
           if (vue.loop) {
             setTimeout(() => {
               // Only loop the animation if there's no animation in progress
