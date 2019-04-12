@@ -82,6 +82,9 @@ export default {
       this.$refs.scrollSpan.scrollLeft = this.$refs.scrollSpan.scrollWidth;
     }
   },
+  destroyed() {
+    cancelAnimationFrame(this.animationFrameId);
+  },
   methods: {
     animateIn() {
       const vue = this;

@@ -1,6 +1,6 @@
 {
   "name": "vue-scroll-span",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/VueScrollSpan.umd.js",
   "module": "dist/VueScrollSpan.common.js",
   "unpkg": "dist/VueScrollSpan.umd.min.js",
