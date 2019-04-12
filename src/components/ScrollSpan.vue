@@ -91,9 +91,10 @@ export default {
         easing: EasingFunctions[this.easing],
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
+          const diff = vue.$refs.scrollSpan.scrollWidth - vue.$refs.scrollSpan.clientWidth;
           return (progress) => {
             // eslint-disable-next-line max-len
-            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart + (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
+            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart + (this.rtl ? -1 : 1) * (diff * progress);
           };
         })(),
         isAnimatingIn: true
@@ -112,9 +113,10 @@ export default {
         easing: EasingFunctions[this.easing],
         draw: (() => {
           const scrollLeftStart = vue.$refs.scrollSpan.scrollLeft;
+          const diff = vue.$refs.scrollSpan.scrollWidth - vue.$refs.scrollSpan.clientWidth;
           return (progress) => {
             // eslint-disable-next-line max-len
-            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart - (this.rtl ? -1 : 1) * (vue.$refs.scrollSpan.scrollWidth * progress);
+            vue.$refs.scrollSpan.scrollLeft = scrollLeftStart - (this.rtl ? -1 : 1) * (diff * progress);
           };
         })(),
         isAnimatingIn: false
