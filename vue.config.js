@@ -6,6 +6,6 @@ module.exports = {
     output: {
       libraryExport: 'default'
     },
-    devtool: 'source-map'
+    devtool: process.env.NODE_ENV === 'development' ? 'eval-source-map' : 'source-map'
   }
 };

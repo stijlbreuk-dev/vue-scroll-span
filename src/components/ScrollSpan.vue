@@ -2,13 +2,12 @@
   <span
     ref="scrollSpan"
     :class="{ vss_rtl: rtl }"
-    @mouseover="mouseOver"
-    @mouseleave="mouseLeave"
+    @mouseenter.self="mouseOver"
+    @mouseleave.self="mouseLeave"
   >
     <slot></slot>
   </span>
 </template>
-
 <script>
 import * as EasingFunctions from '../utils/easing.js';
 
